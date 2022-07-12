@@ -1,0 +1,25 @@
+constraint_value(
+    name = "axivion",
+    constraint_setting = "@platforms//cpu",
+    visibility = ["//visibility:public"],
+)
+
+platform(
+    name = "linux_axivion",
+    constraint_values = [
+        "@platforms//os:linux",
+        ":axivion",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+toolchain(
+    name = "linux_axivion_toolchain",
+    exec_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    target_compatible_with = [":axivion"],
+    toolchain = "//support/axivion:cc-compiler-axivion",
+    toolchain_type = "@rules_cc//cc:toolchain_type",
+)

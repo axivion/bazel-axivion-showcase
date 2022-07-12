@@ -1,0 +1,8 @@
+build --incompatible_strict_action_env
+
+build:axivion --incompatible_enable_cc_toolchain_resolution
+build:axivion --platforms=//support:linux_axivion
+build:axivion --extra_toolchains //support:linux_axivion_toolchain
+
+build:axivion_crosstool --crosstool_top=//support/axivion:toolchain
+build:axivion_crosstool --cpu=axivion
