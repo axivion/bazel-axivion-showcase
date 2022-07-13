@@ -31,8 +31,11 @@ filegroup(
 
 filegroup(
     name = "compiler_deps",
-    srcs = [":cc_wrapper"],
-)  
+    srcs = [
+        ":cc_wrapper",
+        "//:compiler_config",
+    ],
+)
 
 # This is the entry point for --crosstool_top.  Toolchains are found
 # by lopping off the name of --crosstool_top and searching for

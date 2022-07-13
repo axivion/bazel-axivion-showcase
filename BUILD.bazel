@@ -1,0 +1,5 @@
+filegroup(
+    name = "compiler_config",
+    srcs = glob(["axivion/compiler_config/**"]),
+    visibility = ["//visibility:public"],
+)

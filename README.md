@@ -22,9 +22,9 @@ Hello Axivion!
 ## Axivion Suite Setup
 
 To be able to compile this with the Axivion Suite, please make sure you have
-installed/setup the Axivion Suite in `/opt/bauhaus-suite/`, generated a
-`/opt/bauhaus-suite/compiler_config/` using `gccsetup` and placed your license
-key either in `/opt/bauhaus-suite/config/` or `/opt/bauhaus-suite/compiler_config/`.
+installed/setup the Axivion Suite in `/opt/bauhaus-suite/`, generated a compiler
+config using `gccsetup` as `axivion/compiler_config/` in this reposirory and
+placed your license key `axivion/compiler_config/`.
 
 The best way to integrate the Axivion Suite is as a cross-compiler targeting an
 artifical `axivion` cpu. To enable this, [`//support:axivion`](support/BUILD.bazel)
