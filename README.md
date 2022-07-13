@@ -28,7 +28,7 @@ artifical `axivion` cpu. To enable this, [`//support:axivion`](support/BUILD.baz
 defines a constraint value on the cpu and [`//support:linux_axivion`](support/BUILD.bazel)
 a platform that is constraint to this cpu. Finally
 [`//support:linux_axivion_toolchain`](support/BUILD.bazel) defines a compiler
-toolchain cabable of running on a `x86_64` Linux host, targeting the `axivion`
+toolchain capable of running on a `x86_64` Linux host, targeting the `axivion`
 cpu. Build the binary using the Axivion Suite via a [`--platform`](.bazelrc)
 setting using the following:
 
