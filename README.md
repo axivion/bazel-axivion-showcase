@@ -50,11 +50,17 @@ Please refer to the [`.bazelrc`](.bazelrc) file for details on the flag key/valu
 
 ## Notes on the Integration
 
-During a normal build `bazel` will autodetect a compiler toolchain. This can be
-found after the initial `bazelisk run //main` (not using the Axivion Suite) in
-`bazel-bazel-axivion-showcase/external/local_config_cc/`. The generated `BUILD`
-file was copied to [`support/axivion/BUILD.bazel`](support/axivion/BUILD.bazel)
-and slightly adapted:
+During a normal build `bazel` will autodetect a compiler toolchain. The
+toolchain definition can be found after the initial `bazelisk run //main` (not
+using the Axivion Suite) in
+`bazel-bazel-axivion-showcase/external/local_config_cc/`. We can base our
+toolchain on a copy of that definiton,
+https://github.com/limdor/bazel-examples/tree/master/linux_toolchain is a great
+write-up that describes the process in detail.
+
+The generated `BUILD` file was copied to
+[`support/axivion/BUILD.bazel`](support/axivion/BUILD.bazel) and slightly
+adapted:
 
 - the `k8` cpu was replaced with an `axivion` cpu
 - all mentions of an `arm` toolchain were removed
