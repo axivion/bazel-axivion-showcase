@@ -5,6 +5,9 @@ Suite into the `bazel` build system. This assumes that you are running on Linux
 with `gcc` as your compiler and have installed the Axivion Suite as
 `/opt/bauhaus-suite`.
 
+> :warning: **This is not a best-pratice integration** and only serves as a
+> quick showcase on how a proof-of-concept integration could be done.
+
 ## `C++` Source Code
 
 [`//main:main`](main/BUILD.bazel) defines a simple binary that prints `Hello
